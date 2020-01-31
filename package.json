@@ -1,0 +1,44 @@
+{
+  "name": "portfolio-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server/index.js"
+  },
+  "author": "Vaishnavi",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^8.0.6",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@carbon/icons-react": "^10.8.1",
+    "@carbon/themes": "^10.9.2",
+    "axios": "^0.19.2",
+    "body-parser": "^1.17.2",
+    "carbon-components": "^10.9.2",
+    "carbon-components-react": "^7.9.2",
+    "css-loader": "^3.4.2",
+    "express": "^4.15.0",
+    "json-server": "^0.15.1",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "request": "^2.88.0",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "styled-components": "^5.0.0"
+  }
+}

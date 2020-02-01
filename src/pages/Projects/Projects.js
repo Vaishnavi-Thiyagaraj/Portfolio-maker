@@ -14,7 +14,7 @@ const Projects = ({ user }) => {
               <ProjectTitle>{project.name}</ProjectTitle>
               <p>{project.summary}</p>
               <SkillContainer>
-                {[...project.languages, ...project.libraries].map((item, j) => (
+                {project.languages.map((item, j) => (
                   <Pill key={j}>{item.value}</Pill>
                 ))}
               </SkillContainer>

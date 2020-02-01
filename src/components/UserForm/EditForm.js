@@ -67,7 +67,7 @@ class EditForm extends React.Component {
     event.preventDefault();
     //console.log(this.state.skillForm[0].current.state);
     const obj = {
-      "name": this.state.username,
+      "name": this.state.name,
       "id": this.userData.id,
       "basics": {
         "name": this.state.name,
@@ -120,6 +120,7 @@ class EditForm extends React.Component {
     axios(options)
       .then(function (response) {
         console.log(response);
+        alert(`Your portfolio is avaiable at http://localhost:3000/api/users?name=${response.data.name}`);
       })
       .catch(function (error) {
         console.log(error);

@@ -34,6 +34,10 @@ export const Header = styled.div`
     color: white;
 `;
 
+export const Form = styled.div`
+  border: 1px solid black;
+`;
+
 export const Button = styled.button`
   display: flex;
   text-decoration: none;
@@ -47,8 +51,4 @@ export const Button = styled.button`
   &:hover {
     background-color: #2ecc40;
   }
-  /* svg {
-    fill: white;
-    margin-left: 8px;
-  } */
 `;

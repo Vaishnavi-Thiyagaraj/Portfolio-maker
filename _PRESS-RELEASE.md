@@ -17,16 +17,16 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand. Portfolio generator.
+  > Portfolio maker
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.  
+  > Publish your portfolio site in less than 5 minutes.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > If you are a software engineer and want to create a portfolio site you can do it by simply answering some questions.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Publish your portfolio in less than 5 minutes without designing the entire site.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
@@ -36,6 +36,7 @@ Once the project moves into development, the press release can be used as a touc
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.

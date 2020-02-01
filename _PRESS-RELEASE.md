@@ -35,11 +35,11 @@ Once the project moves into development, the press release can be used as a touc
   > A quote from a spokesperson in your company.
 
 ## How to Get Started ##
-  > Go to http://localhost:3000/.
-    Answer all the questions and submit.
-    An account will be created for you with your name.
-    You can see your portfolio at http://localhost:3000/?user=<name>
-    you can edit details at http://localhost:3000/edit?user=<name>
+  > *Go to http://localhost:3000/.
+    *Answer all the questions and submit.
+    *An account will be created for you with your name.
+    *You can see your portfolio at http://localhost:3000/?user=name
+    *you can edit details at http://localhost:3000/edit?user=name
   
 
 ## Customer Quote ##

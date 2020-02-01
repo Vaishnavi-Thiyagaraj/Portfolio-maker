@@ -23,6 +23,21 @@ class WorkForm extends React.Component {
       [name]: value
     });
   }
+  componentDidMount() {
+    if (this.props.name) {
+      console.log("name", this.props.name);
+      var work = this.props.getWorkData(this.props.name);
+      if(work)
+      this.setState({
+        company: work.company,
+        position: work.position,
+        location: work.location,
+        summary: work.summary,
+        startyear: work.startyear,
+        endyear: work.endyear
+      });
+    }
+  }
   //const {fields, stateValues, handleInputChange} = props;
   render() {
     return (

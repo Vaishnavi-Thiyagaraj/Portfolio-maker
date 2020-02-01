@@ -24,6 +24,21 @@ class EducationForm extends React.Component {
       [name]: value
     });
   }
+  componentDidMount() {
+    if (this.props.name) {
+      console.log("name", this.props.name);
+      var work = this.props.getEducationData(this.props.name);
+      if(work)
+      this.setState({
+        institution: work.institution,
+        area: work.area,
+        studyType: work.studyType,
+        startyear: work.startyear,
+        endyear: work.endyear,
+        description: work.description
+      });
+    }
+  }
   //const {fields, stateValues, handleInputChange} = props;
   render() {
     return (

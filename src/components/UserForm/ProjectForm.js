@@ -44,6 +44,18 @@ class ProjectForm extends React.Component {
       languages: values
     });
   }
+  componentDidMount() {
+    if (this.props.name) {
+      console.log("name", this.props.name);
+      var project = this.props.getProjectsData(this.props.name);
+      if(project)
+      this.setState({
+        name: project.name,
+        summary: project.summary,
+        languages: project.languages
+      });
+    }
+  }
   //const {fields, stateValues, handleInputChange} = props;
   render() {
     return (

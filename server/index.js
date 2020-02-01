@@ -37,8 +37,7 @@ app.use('/api', server);
 //     }
 //   });
 // });
-
-app.get('/', function (req, res) {
+var fn = function (req, res) {
   if(req.params.user) {
     request(`http://localhost:${port}/api/users?name=${req.params.user}`, function (error, response, body) {
       // console.log(body);
@@ -52,8 +51,9 @@ app.get('/', function (req, res) {
     });
   } else {
     res.sendFile(path.join(__dirname + '/../dist/index.html'));
-  }
-});
+  }};
+app.get('/', fn);
+app.get('/edit', fn);
 
 app.listen(3000, function (error) {
   if (error) {

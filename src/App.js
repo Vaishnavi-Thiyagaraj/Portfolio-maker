@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Pages from './pages';
 import UserForm from './components/UserForm/UserForm.js'
+import EditForm from './components/UserForm/EditForm.js';
 import { Link, useLocation } from 'react-router-dom';
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
   if(!user) {
     //return (<div>{"Create a new user"}</div>);
     return <UserForm/>
+  }
+  if(window.location.pathname === "/edit") {
+    return <EditForm user={user}/>
   }
   //return (<div>{"I am a existing user"}</div>);
    return <Pages user={user} />;

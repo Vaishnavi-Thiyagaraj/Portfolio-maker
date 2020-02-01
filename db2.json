@@ -1,0 +1,217 @@
+{
+  "users": [
+    {
+      "name": "richard-hendricks-demo",
+      "id": "10",
+      "basics": {
+        "name": "Vaishnavi",
+        "picture": "https://avatars0.githubusercontent.com/u/58340587?v=4",
+        "label": "CEO @piedpiper",
+        "headline": "Building decentralized internet for everyone",
+        "summary": "CEO of Pied Piper and working on a decentralized internet for everyone - PiperNet. PiperNet is powered by your devices, protective of your privacy, and programmed for your freedom.\n\nToday’s web is an Internet of Kings, dominated by monopolies that crush innovation and promote surveillance capitalism. Discover for yourself why we need PiperNet, the Internet of People™.",
+        "website": "http://www.piedpiper.com/",
+        "blog": "https://levelup.gitconnected.com",
+        "yearsOfExperience": 10,
+        "username": "richard-hendricks-demo",
+        "email": "",
+        "region": "Silicon Valley, CA",
+        "phone": "",
+        "profiles": [
+          {
+            "network": "gitconnected",
+            "url": "https://gitconnected.com/richard-hendricks-demo"
+          },
+          {
+            "network": "GitHub",
+            "url": "https://github.com/richard-hendricks-demo"
+          },
+          {
+            "network": "Twitter",
+            "url": "https://twitter.com/@piedpiper"
+          }
+        ]
+      },
+      "skills": [
+        {
+          "name": "C"
+        },
+        {
+          "name": "Golang"
+        },
+        {
+          "name": "Java"
+        },
+        {
+          "name": "TypeScript"
+        },
+        {
+          "name": "NodeJs"
+        }
+      ],
+      "projects": [
+        {
+          "name": "middle-out-compression",
+          "summary": "Making files smaller",
+          "languages": [
+            {
+              "value": "C"
+            },
+            {
+              "value": "C++"
+            }
+          ]
+        },
+        {
+          "name": "pied-piper-coin",
+          "summary": "The currency of the open web",
+          "languages": [
+            {
+              "value": "Node.js"
+            },
+            {
+              "value": "React"
+            }
+          ]
+        },
+        {
+          "name": "SDC",
+          "summary": "An e-bay like application",
+          "languages": []
+        }
+      ],
+      "work": [
+        {
+          "company": "Pied Piper",
+          "position": "CEO",
+          "location": "Silicon Valley, CA",
+          "summary": "Building:\n- PiperNet\n- PiedPiperCoin\n- Middle-Out Compression",
+          "startyear": "2014",
+          "endyear": "2019"
+        },
+        {
+          "company": "Aviato",
+          "position": "Developer",
+          "location": "Fremont, CA",
+          "summary": "I built the aggregation algorithm to track flights",
+          "startyear": "2014",
+          "endyear": "2014"
+        }
+      ],
+      "education": [
+        {
+          "institution": "Stanford",
+          "area": "Computer Science",
+          "studyType": "Bachelor's of Science",
+          "startyear": "2012",
+          "endyear": "2014",
+          "description": "I studied computer science at Stanford"
+        },
+        {
+          "institution": "Hack Reactor",
+          "area": "CS",
+          "studyType": "BootCamp",
+          "startyear": "2019",
+          "endyear": "2020",
+          "description": "Its a bootcamp"
+        }
+      ]
+    },
+    {
+      "name": "Vaishu",
+      "id": "1",
+      "basics": {
+        "name": "rename1",
+        "picture": "https://avatars0.githubusercontent.com/u/58340587?v=4",
+        "label": "CEO @piedpiper",
+        "headline": "Building decentralized internet for everyone",
+        "summary": "CEO of Pied Piper and working on a decentralized internet for everyone - PiperNet. PiperNet is powered by your devices, protective of your privacy, and programmed for your freedom.\n\nToday’s web is an Internet of Kings, dominated by monopolies that crush innovation and promote surveillance capitalism. Discover for yourself why we need PiperNet, the Internet of People™.",
+        "website": "http://www.piedpiper.com/",
+        "blog": "https://levelup.gitconnected.com",
+        "yearsOfExperience": 10,
+        "username": "richard-hendricks-demo",
+        "email": null,
+        "region": "Silicon Valley, CA",
+        "phone": null,
+        "profiles": [
+          {
+            "network": "gitconnected",
+            "url": "https://gitconnected.com/richard-hendricks-demo"
+          },
+          {
+            "network": "GitHub",
+            "url": "https://github.com/richard-hendricks-demo"
+          },
+          {
+            "network": "Twitter",
+            "url": "https://twitter.com/@piedpiper"
+          }
+        ]
+      },
+      "skills": [
+        {
+          "name": "C"
+        },
+        {
+          "name": "Golang"
+        },
+        {
+          "name": "Java"
+        },
+        {
+          "name": "TypeScript"
+        }
+      ],
+      "projects": [
+        {
+          "name": "middle-out-compression",
+          "summary": "Making files smaller",
+          "languages": [
+            "Go",
+            "C++"
+          ],
+          "libraries": []
+        },
+        {
+          "name": "pied-piper-coin",
+          "summary": "The currency of the open web",
+          "languages": [
+            "TypeScript",
+            "Go"
+          ],
+          "libraries": [
+            "Node.js",
+            "React"
+          ]
+        }
+      ],
+      "work": [
+        {
+          "company": "Pied Piper",
+          "position": "CEO",
+          "location": "Silicon Valley, CA",
+          "summary": "Building:\n- PiperNet\n- PiedPiperCoin\n- Middle-Out Compression",
+          "startyear": "2014",
+          "endyear": "2019"
+        },
+        {
+          "company": "Aviato",
+          "position": "Developer",
+          "location": "Fremont, CA",
+          "summary": "I built the aggregation algorithm to track flights",
+          "startyear": "2014",
+          "endyear": "2014"
+        }
+      ],
+      "education": [
+        {
+          "institution": "Stanford",
+          "area": "Computer Science",
+          "studyType": "Bachelor's of Science",
+          "startyear": "2012",
+          "endyear": "2014",
+          "description": "I studied computer science at Stanford"
+        }
+      ]
+    }
+  ]
+}

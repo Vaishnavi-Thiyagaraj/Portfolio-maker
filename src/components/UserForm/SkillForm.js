@@ -9,6 +9,16 @@ class SkillForm extends React.Component {
     }
     this.fields = [{ name: "name", type: "text" }];
   }
+  componentDidMount() {
+    if(this.props.name) {
+      console.log("name",this.props.name);
+      var name = this.props.getSkillData(this.props.name);
+      if(name)
+      this.setState({
+        name: name.name
+      });
+    }
+  }
   handleInputChange(event) {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;

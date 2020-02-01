@@ -9,7 +9,7 @@ import ProjectForm from './ProjectForm.js';
 import EducationForm from './EducationForm.js';
 import WorkForm from './WorkForm.js';
 
-class UserForm extends React.Component {
+class EditForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -68,6 +68,7 @@ class UserForm extends React.Component {
     //console.log(this.state.skillForm[0].current.state);
     const obj = {
       "name": this.state.username,
+      "id": this.userData.id,
       "basics": {
         "name": this.state.name,
         "picture": this.state.picture,
@@ -88,7 +89,7 @@ class UserForm extends React.Component {
       obj.basics.profiles.push(form.current.state);
       console.log(form.current.state);
     })
-    obj.basics.skills = [];
+    obj.skills = [];
     this.state.skillForm.forEach((form) => {
       obj.skills.push(form.current.state);
       console.log(form.current.state);
@@ -109,10 +110,10 @@ class UserForm extends React.Component {
       console.log(form.current.state);
     })
     const options = {
-      method: 'POST',
+      method: 'PUT',
       headers: { 'content-type': 'application/json' },
       data: obj,
-      url:'http://localhost:3000/api/users',
+      url: `http://localhost:3000/api/users/${this.userData.id}`,
     };
 
     //axios.post(`http://localhost:3000/api/users`, obj)
@@ -126,7 +127,7 @@ class UserForm extends React.Component {
 
   }
 
-  addSkill() {
+  addSkill(skill) {
     var r = React.createRef();
     const skillForm = [...this.state.skillForm];
     skillForm.push(r);
@@ -134,7 +135,10 @@ class UserForm extends React.Component {
       skillForm: skillForm
     });
   }
-
+  getSkillData(index) {
+    console.log('index',index);
+    return this.userData.skills[+index];
+  }
   addProfile() {
     var r = React.createRef();
     const profileForm = [...this.state.profileForm];
@@ -143,7 +147,9 @@ class UserForm extends React.Component {
       profileForm: profileForm
     });
   }
-
+  getProfileData(index) {
+    return this.userData.basics.profiles[+index];
+  }
   addProject() {
     var r = React.createRef();
     const projectForm = [...this.state.projectForm];
@@ -151,6 +157,9 @@ class UserForm extends React.Component {
     this.setState({
       projectForm: projectForm
     });
+  }
+  getProjectsData(index) {
+    return this.userData.projects[+index];
   }
 
   addEducation() {
@@ -161,6 +170,9 @@ class UserForm extends React.Component {
       educationForm: educationForm
     });
   }
+  getEducationData(index) {
+    return this.userData.education[+index];
+  }
 
   addWork() {
     var r = React.createRef();
@@ -170,39 +182,80 @@ class UserForm extends React.Component {
       workForm: workForm
     });
   }
+  getWorkData(index) {
+    return this.userData.work[+index];
+  }
+  componentDidMount() {
+    var searchParams = window.location.search.split('=');
+    fetch(`http://localhost:3000/api/users?name=${searchParams[1]}`)
+      .then(res => res.json())
+      .then(user => {
+        this.userData = user[0];
+        const initialValue = user[0].basics;
+        this.setState({
+          "name": initialValue.name,
+          "picture": initialValue.picture,
+          "label": initialValue.label,
+          "headline": initialValue.headline,
+          "summary": initialValue.summary,
+          "website": initialValue.website,
+          "blog": initialValue.blog,
+          "yearsOfExperience": initialValue.yearsOfExperience,
+          "username": initialValue.username,
+          "email": initialValue.email,
+          "region": initialValue.region,
+          "phone": initialValue.phone
+        });
+        user[0].skills.forEach((skill) => {
+          this.addSkill(skill);
+        })
+        initialValue.profiles.forEach((profile) => {
+          this.addProfile(profile);
+        })
+        user[0].projects.forEach((project) => {
+          this.addProject(project);
+        })
+        user[0].work.forEach((w) => {
+          this.addWork(w);
+        })
+        user[0].education.forEach((edu) => {
+          this.addEducation(edu);
+        })
 
+      });
+  }
   render() {
     const { skillForm, profileForm, projectForm, workForm, educationForm } = this.state;
     return (<Container>
       <Header>User Info</Header>
       <MainForm fields={this.fields} stateValues={this.state} handleInputChange={this.handleInputChange} />
       <Button value="Add Profile" onClick={this.addProfile.bind(this)} >Add Profile</Button>
-      {profileForm.map((profileRef) => {
-        return <ProfileForm ref={profileRef} />
+      {profileForm.map((profileRef, i) => {
+        return <ProfileForm ref={profileRef} name ={""+i} key={i} getProfileData={this.getProfileData.bind(this)}/>
       })}
       <Header>Skills</Header>
       <Button value="Add Profile" onClick={this.addSkill.bind(this)} >Add Skill</Button>
-      {skillForm.map((reference) => {
-        return <SkillForm ref={reference} />
+      {skillForm.map((reference, i) => {
+        return <SkillForm ref={reference} name ={""+i} key={i} getSkillData={this.getSkillData.bind(this)}/>
       })}
       <Header>Projects</Header>
       <Button value="Add Project" onClick={this.addProject.bind(this)} >Add Project</Button>
-      {projectForm.map((reference) => {
-        return <ProjectForm ref={reference} />
+      {projectForm.map((reference, i) => {
+        return <ProjectForm ref={reference} getProjectsData={this.getProjectsData.bind(this)} name ={""+i} key={i}/>
       })}
       <Header>Work</Header>
       <Button value="Add Work" onClick={this.addWork.bind(this)} >Add Work</Button>
-      {workForm.map((reference) => {
-        return <WorkForm ref={reference} />
+      {workForm.map((reference, i) => {
+        return <WorkForm ref={reference} getWorkData={this.getWorkData.bind(this)} name ={""+i} key={i}/>
       })}
       <Header>Education</Header>
       <Button value="Add Education" onClick={this.addEducation.bind(this)} >Add Education</Button>
-      {educationForm.map((reference) => {
-        return <EducationForm ref={reference} />
+      {educationForm.map((reference, i) => {
+        return <EducationForm ref={reference} getEducationData={this.getEducationData.bind(this)} name ={""+i} key={i}/>
       })}
       <input type="button" value="Submit" onClick={this.handleSubmit} />
     </Container>)
   }
 }
 
-export default UserForm;
+export default EditForm;

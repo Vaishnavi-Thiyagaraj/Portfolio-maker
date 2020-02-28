@@ -4,18 +4,18 @@
       "name": "Vaishnavi",
       "id": "10",
       "basics": {
-        "name": "Vaishnavi",
+        "name": "Vaishnavi Thiyagaraj",
         "picture": "https://avatars0.githubusercontent.com/u/49796069?s=400&u=41d86ea40e247a68e412dab5b595a42941b228ea&v=4",
         "label": "Developer @XXX",
-        "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "headline": "Experienced Software Engineer actively seeking Full-time/Contract opportunity",
+        "summary": "Versatile Front-end Developer with 5+ years of experience designing, developing, and managing complex web applications and internal frameworks. Specializes in HTML5, Javascript and CSS3.",
         "website": "http://www.mywebsite.com/",
         "blog": "https://myblog.com",
-        "yearsOfExperience": 5,
-        "username": "dolor morbi non",
+        "yearsOfExperience": "5",
+        "username": "vaishuthiyagaraj@gmail.com",
         "email": "vaishuthiyagaraj@gmail.com",
         "region": "Sunnyvale, CA",
-        "phone": "408-886-0762",
+        "phone": "(408)-886-0762",
         "profiles": [
           {
             "network": "LinkedIn",
@@ -33,10 +33,10 @@
       },
       "skills": [
         {
-          "name": "Java"
+          "name": "Javascript"
         },
         {
-          "name": "HTML5"
+          "name": "HTML"
         },
         {
           "name": "CSS"
@@ -70,9 +70,6 @@
             },
             {
               "value": "React"
-            },
-            {
-              "value": "AWS"
             }
           ]
         }

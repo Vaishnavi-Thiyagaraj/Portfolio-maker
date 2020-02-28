@@ -11,7 +11,6 @@ class SkillForm extends React.Component {
   }
   componentDidMount() {
     if(this.props.name) {
-      console.log("name",this.props.name);
       var name = this.props.getSkillData(this.props.name);
       if(name)
       this.setState({
@@ -28,12 +27,10 @@ class SkillForm extends React.Component {
       [name]: value
     });
   }
-  //const {fields, stateValues, handleInputChange} = props;
   render() {
     return (
       <form>
         {this.fields.map((field) => {
-          //var name = field.name;
           return <label key={field.name}>
             {field.name}
             <InputField

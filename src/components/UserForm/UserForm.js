@@ -63,9 +63,7 @@ class UserForm extends React.Component {
   }
 
   handleSubmit(event) {
-    //alert('Your favorite flavor is: ' + JSON.stringify(this.state));
     event.preventDefault();
-    //console.log(this.state.skillForm[0].current.state);
     const obj = {
       "name": this.state.username,
       "basics": {
@@ -86,27 +84,22 @@ class UserForm extends React.Component {
     obj.basics.profiles = [];
     this.state.profileForm.forEach((form) => {
       obj.basics.profiles.push(form.current.state);
-      console.log(form.current.state);
     })
     obj.basics.skills = [];
     this.state.skillForm.forEach((form) => {
       obj.skills.push(form.current.state);
-      console.log(form.current.state);
     })
     obj.projects = [];
     this.state.projectForm.forEach((form) => {
       obj.projects.push(form.current.state);
-      console.log(form.current.state);
     })
     obj.work = [];
     this.state.workForm.forEach((form) => {
       obj.work.push(form.current.state);
-      console.log(form.current.state);
     });
     obj.education = [];
     this.state.educationForm.forEach((form) => {
       obj.education.push(form.current.state);
-      console.log(form.current.state);
     })
     const options = {
       method: 'POST',
@@ -114,8 +107,6 @@ class UserForm extends React.Component {
       data: obj,
       url:'http://localhost:3000/api/users',
     };
-
-    //axios.post(`http://localhost:3000/api/users`, obj)
     axios(options)
       .then(function (response) {
         console.log(response);

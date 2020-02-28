@@ -25,7 +25,6 @@ class WorkForm extends React.Component {
   }
   componentDidMount() {
     if (this.props.name) {
-      console.log("name", this.props.name);
       var work = this.props.getWorkData(this.props.name);
       if(work)
       this.setState({
@@ -38,12 +37,10 @@ class WorkForm extends React.Component {
       });
     }
   }
-  //const {fields, stateValues, handleInputChange} = props;
   render() {
     return (
       <form>
         {this.fields.map((field) => {
-          //var name = field.name;
           return <label key={field.name}>
             {field.name}
             <InputField
@@ -53,7 +50,6 @@ class WorkForm extends React.Component {
               onChange={this.handleInputChange.bind(this)}
             />
           </label>
-
         })}
       </form>
     );

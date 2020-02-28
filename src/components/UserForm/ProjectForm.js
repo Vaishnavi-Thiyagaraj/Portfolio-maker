@@ -1,5 +1,4 @@
 import React from 'react';
-// import UserForm from './UserForm.js'
 import { InputField } from './styles';
 class ProjectForm extends React.Component {
   constructor(props) {
@@ -46,7 +45,6 @@ class ProjectForm extends React.Component {
   }
   componentDidMount() {
     if (this.props.name) {
-      console.log("name", this.props.name);
       var project = this.props.getProjectsData(this.props.name);
       if(project)
       this.setState({
@@ -56,12 +54,10 @@ class ProjectForm extends React.Component {
       });
     }
   }
-  //const {fields, stateValues, handleInputChange} = props;
   render() {
     return (
       <form>
         {this.fields.map((field) => {
-          //var name = field.name;
           return <label key={field.name}>
             {field.name}
             <InputField

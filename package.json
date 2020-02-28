@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://Vaishnavi-Thiyagaraj.github.io/Portfolio-maker/",
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js"
+    "server-dev": "nodemon server/index.js",
+    "predeploy": "npm run react-dev",
+    "deploy": "gh-pages -d build"
   },
   "author": "Vaishnavi",
   "license": "ISC",
@@ -29,6 +32,7 @@
     "carbon-components-react": "^7.9.2",
     "css-loader": "^3.4.2",
     "express": "^4.15.0",
+    "gh-pages": "^2.2.0",
     "json-server": "^0.15.1",
     "node-sass": "^4.13.1",
     "nodemon": "^2.0.2",

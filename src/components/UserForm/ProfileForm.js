@@ -1,5 +1,4 @@
 import React from 'react';
-// import UserForm from './UserForm.js'
 import { InputField } from './styles';
 class ProfileForm extends React.Component {
   constructor(props) {
@@ -21,7 +20,6 @@ class ProfileForm extends React.Component {
   }
   componentDidMount() {
     if (this.props.name) {
-      console.log("name", this.props.name);
       var profile = this.props.getProfileData(this.props.name);
       if(profile)
       this.setState({
@@ -30,12 +28,10 @@ class ProfileForm extends React.Component {
       });
     }
   }
-  //const {fields, stateValues, handleInputChange} = props;
   render() {
     return (
       <form>
         {this.fields.map((field) => {
-          //var name = field.name;
           return <label key={field.name}>
             {field.name}
             <InputField
@@ -45,9 +41,7 @@ class ProfileForm extends React.Component {
               onChange={this.handleInputChange.bind(this)}
             />
           </label>
-
         })}
-        {/* <input type="submit" value="Submit" /> */}
       </form>
     );
   }
